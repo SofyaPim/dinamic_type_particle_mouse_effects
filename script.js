@@ -58,18 +58,18 @@ window.addEventListener("DOMContentLoaded", function () {
       this.lineHeight = this.fontSize * 1.2;
       this.maxTextWidth = this.canvasWidth * 0.9;
       this.textInput = document.getElementById("textInput");
-      // this.textInput.addEventListener('keyup', (e)=> {    
-      // if(e.key !== ' '){
-      //       this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
-      //       this.wrapText(e.target.value);
+      this.textInput.addEventListener('keyup', (e)=> {    
+      if(e.key !== ' '){
+            this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
+            this.wrapText(e.target.value);
             
-      //     }
-      //   })
+          }
+        })
         this.textInput.addEventListener("input", (e) => {
-        if (e.target.value.trim() !== " ") {
+        
           this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
           this.wrapText(e.target.value);
-        }
+        
       });
         // particle text
         this.particles = [];
