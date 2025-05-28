@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+  background: black;
+}
+canvas {
+  background: #19253b;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+input{
+  position: absolute;
+  width:calc(100% - 20px) ;
+  padding: 10px;
+  margin: 10px;
+  z-index: 100;
+}
