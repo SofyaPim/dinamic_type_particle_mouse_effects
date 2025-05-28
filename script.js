@@ -76,7 +76,23 @@ window.addEventListener("DOMContentLoaded", function () {
         window.addEventListener('mousemove', (e) => {
           this.mouse.x = e.x;
           this.mouse.y = e.y;
-        })
+        });
+       window.addEventListener('touchstart', e => {
+             e.preventDefault();    
+            this.mouse.x = e.touches[0].clientX;
+            this.mouse.y = e.touches[0].clientY;            
+          });
+          
+          window.addEventListener('touchend', e => {
+             e.preventDefault(); 
+            
+          });
+          
+          window.addEventListener('touchmove', e => { 
+             e.preventDefault();           
+              this.mouse.x = e.touches[0].clientX;
+              this.mouse.y = e.touches[0].clientY;            
+          });
         
     }
     wrapText(text) {
