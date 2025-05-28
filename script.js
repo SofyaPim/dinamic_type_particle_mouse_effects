@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", function () {
       //     }
       //   })
         this.textInput.addEventListener("input", (e) => {
-        if (e.target.value.trim() !== "") {
+        if (e.target.value.trim() !== " ") {
           this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
           this.wrapText(e.target.value);
         }
